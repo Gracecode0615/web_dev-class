@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage</title>
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+    }
+
+    img{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     opacity: 0.7;
+    }
+
+    .write-up{
+      position: absolute;
+      width:60%;
+      height: 300px;
+      /* background: #fff; */
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      color: #fff;
+      transform: translate(-50%,-50%);
+  
+    }
+
+    .write-up h2{
+      position: relative;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1.5;
+    }
+
+    .write-up p{
+      position: relative;
+      width: 80%;
+      height: auto;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+
+    }
+    button{
+      position: relative;
+      width: 150px;
+      height: 45px;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius:25px ;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    button:hover{
+      background: transparent;
+      color: #000;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <img src="https://i.pinimg.com/736x/33/51/55/335155e761a5b259e79f3c5e6c63cd4a.jpg" alt="a man at night on his system">
+
+      <div class="write-up">
+        <h2>Kcee International Limited</h2>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium, deserunt illum ab assumenda minus repellat earum sit id corrupti quo. Aliquid aut error quas quae exercitationem pariatur rem temporibus?</p>
+
+        <button>Contact me</button>
+      </div>
+    </div>
+</body>
+</html>

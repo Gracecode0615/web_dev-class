@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: 0;
+      }
+
+      .carousel{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background: #000;
+      }
+
+      .carousel img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        opacity: 0;
+      }
+
+       .carousel img:first-child{
+        opacity: 1;
+      }
+      .arrow{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        border-radius: 50%;
+        opacity: 0.3;
+
+      }
+        .arrow:first-child{
+        position: absolute;
+         top: 50%!important;
+         left: 0;
+      }
+         .arrow:last-child{
+            position: absolute;
+         top: 50%;
+         right: 0;
+      }
+
+      .arrow:hover{
+        background: rgb(134, 134, 200);
+      }
+
+
+
+    </style>
+</head>
+<body>
+     <div class="carousel">
+    <img id="img1"  src="https://i.pinimg.com/736x/e4/23/b6/e423b6e79cc64c332d75d90929cfc635.jpg" alt="">
+    <!-- <img id="img2"  src="https://i.pinimg.com/736x/e4/23/b6/e423b6e79cc64c332d75d90929cfc635.jpg" alt=""> -->
+    <img id="img2" src="https://i.pinimg.com/736x/2c/14/a0/2c14a08e61bfde0b0c36718689d3db0e.jpg" alt="">
+
+    <div onclick="clickleft()" class="arrow">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
+    <div onclick="clickright()" class="arrow">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+    </div>
+   
+  </div>
+    
+
+    <script>
+        function clickleft(){
+            var img1 = document.getElementById("img1");
+            var img2 = document.getElementById("img2");
+
+            img1.style.opacity = "1";
+            img1.style.left= "0";
+            img1.style.transition ="0.6s" 
+
+            ///////////////////////
+
+            
+            img2.style.opacity = "0";
+            img2.style.right= "-100%";
+            img2.style.transition ="0.6s" 
+        }
+
+        function clickright(){
+            var img3 = document.getElementById("img1");
+            var img4 = document.getElementById("img2");
+
+            img3.style.opacity = "0";
+            img3.style.left= "0";
+            img3.style.transition ="0.6s" 
+
+            ///////////////////////
+
+            
+            img4.style.opacity = "1";
+            img4.style.left= "0%";
+            img4.style.transition ="0.6s" 
+        }
+
+
+    
+    </script>
+</body>
+</html>

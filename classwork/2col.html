@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- google font api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing:border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+           background-image: linear-gradient( 90.5deg,  rgba(112,181,176,1) 1.9%, rgba(220,244,241,1) 87.7% );;
+            padding: 80px 160px;
+        }
+        .container .flex-wrap{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: #fff;
+            display: flex;
+            gap: 20px;
+        }
+
+        .container .flex-wrap .col{
+            position: relative;
+            width: 50%;
+            height: 400px;
+            background: #ebd6d6        
+        }
+
+        .container .flex-wrap .col:first-child{
+            position: relative;
+            width: 50%;
+            height: auto;
+            padding:100px 30px;
+                  
+        }
+        .container .flex-wrap .col:first-child h2{
+            position: relative;
+            width: 90%;
+            height: auto;
+            font-weight: 500;
+            font-size: 50px;
+            letter-spacing: 0.02;
+            line-height: 60px;
+            margin-bottom: 10px;        
+        }
+
+        .container .flex-wrap .col:first-child p{
+            position: relative;
+            width: 80%;
+            height: auto;
+            color: #333;
+            font-weight:400;
+            font-size: 15px;
+            margin-bottom: 15px;        
+        }
+       
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-wrap">
+            <div class="col">
+                <h2>Knowlegde is an investment that will never lose</h2>
+                <p>Improve your skill and Knowlegde for better career future</p>
+
+                <div class="search-input">
+                    <input type="search">
+                    <button>search</button>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+</html>
