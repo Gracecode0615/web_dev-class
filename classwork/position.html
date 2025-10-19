@@ -12,47 +12,64 @@
             box-sizing: border-box;
         }
 
-        .box1{
+        .box:first-child{
             position: relative;
             width: 50%;
             height: 50vh;
             top: 0;
             left: 0;
             background: #000;
+            transition: 0.5s;
         }
 
-        .box2{
+        .box:first-child:hover{
+            background: green;
+            width: 40%;
+        }
+
+        .box:nth-child(2){
             position: absolute;
             width: 50%;
             height: 50vh;
             top: 0;
             right: 0;
             background: yellow;
+            transition: 0.5s;
+          
         }
 
-         .box3{
+        .box:nth-child(2):hover{
+            background: gold;
+        }
+
+          .box:nth-child(3){
             position: absolute;
             width: 50%;
+            height: 50vh;
             bottom: 0;
             right: 0;
-            height: 50vh;
             background: red;
         }
 
-        .box4{
-           position: absolute;
+          .box:nth-child(4){
+            position: absolute;
             width: 50%;
+            height: 50vh;
             bottom: 0;
             left: 0;
-            height: 50vh;
-            background: blue;
+            background:blue;
+          
         }
+
+        
+
+    
     </style>
 </head>
 <body>
-   <div class="box1"></div> 
-   <div class="box2"></div> 
-   <div class="box3"></div> 
-   <div class="box4"></div> 
+   <div class="box"></div> 
+   <div class="box"></div> 
+   <div class="box"></div> 
+   <div class="box"></div> 
 </body>
 </html>

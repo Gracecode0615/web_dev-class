@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Coder</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="shortcut icon" type="image.jpg" href="images/logo.png"/>
+           <link type="text/css" rel="stylesheet" href="coding.css"/>
+           <!-- fontawesome -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+nav {
+    flex: 1;
+    text-align: right;
+    
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+nav ul li a:hover {
+    color: crimson;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    margin: 100px 0;
+}
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 100px;
+}
+.col-1 h2 {
+    font-size: 54px;
+}
+.col-1 h3 {
+    font-size: 30px;
+    color: crimson;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1 p {
+    font-size: 16px;
+    color: black;
+    font-weight: 100;
+}
+.col-1 h4 {
+    margin: 30px 0;
+    font-size: 20px;
+}
+button {
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: crimson;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.52;
+} 
+button img {
+    width: 30px;
+    display: none;
+}
+button:hover img {
+    display: block;
+}
+button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col-1::after {
+    content: '';
+    width: 10px;
+    height: 50%;
+    background: crimson;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+}
+.col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+.web-design{
+    width: 90%;
+    height: auto;
+    background-size: contain;
+}
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 20;
+    background: crimson;
+    height: 120%;
+    width: 60%;
+    z-index: -1;
+    border-radius: 20px 0 0 20px;
+    
+    
+
+}
+.social-links {
+    text-align: center;
+    align-items: center;
+}
+.social-links img {
+    height: 30px;
+    margin: 20px;
+    cursor:pointer;
+}
+
+@media only screen and (max-width: 700px) {
+
+}
+           </style>
+        </head>
+
+        <body>
+            <header>
+                <div class="container">
+                    <div class="navbar">
+                        <img src="images/logo.png" class="logo">
+                        <input class="side-menu" type="checkbox" id="side-menu"/>
+                        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+                        <nav>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">Coding and Animation</a>
+                                </li>
+                                <li>
+                                    <a href="#"> App Development</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Web Development</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="row">
+                    <div class="col-1">
+                        <h2> Web Development<br>HTML & CSS</h2>
+                        <h3> Create amazing Websites like this</h3>
+                        <p> Responsive and professional</p>
+                        <h4>$25.50</h4>
+                        <button type="button"> Enroll Now<img src="images/arrow.png"></button>
+                    </div>
+                    <div class="col-2">
+                        <img src="images/online-web-design.jpg" class="web-design"/>
+                        <div class="color-box"></div>
+                    </div>
+                </div>
+                
+            </main>
+            <footer>
+                <div class="social-links">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                
+                    <p>Copyright (c) Dominion 2023</p>
+
+                </div>
+            </footer>
+            
+        </body>
+        
+    </html>
